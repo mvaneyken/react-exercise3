@@ -60,7 +60,8 @@ class App extends Component {
           </ol>
           <img src={this.state.complex[this.state.imageIndex]['image']} alt="Awesome view"/>
           <p>{this.state.complex[this.state.imageIndex]['name']}</p>
-          <p>API results: <ReactJson src={this.state.weather}/></p>
+          <p>API results:</p>
+          <ReactJson src={this.state.weather}/>
           <br />
           <button onClick={this.handleClick}>Next</button>
         </header>
