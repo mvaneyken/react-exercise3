@@ -26,12 +26,9 @@ class App extends Component {
   }
 
   getWeather() {
-    /* ToDo : solve CORS problem */
-    axios.get("https://www.metaweather.com/api/location/search/?lattlong=36.96,-122.02", {
-        headers: { 'Access-Control-Allow-Origin': '*' },
-        })
-      .then(response => console.log(response))
-      /* .then(response => this.setState({weather: response.data})) */
+    axios
+      .get(`${'https://cors-anywhere.herokuapp.com/'}http://www.metaweather.com/api/location/search/?lattlong=36.96,-122.02`)
+      .then(response => this.setState({weather: response.data}))
   }
 
   handleClick = () => {
